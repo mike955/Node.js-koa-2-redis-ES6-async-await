@@ -9,6 +9,9 @@ import debugg from 'debug';
 import configs from '../configs/index'
 
 const router = new Router();
+const debug = debug('KNME');
+
+debug('router start');
 
 router
     .get('/', (ctx, next) => {

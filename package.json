@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "babel-watch ./app.js",
-        "dev": "DEBUG=MERN babel-watch ./app.js",
+        "dev": "DEBUG=KNME babel-watch ./app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -50,10 +50,14 @@
     },
     "homepage": "https://github.com/zza00000/Node.js-koa-2-redis-ES6-async-await#readme",
     "dependencies": {
+        "bunyan": "^1.8.12",
+        "fs-extra": "^4.0.1",
         "koa": "^2.3.0",
         "koa-bodyparser": "^4.2.0",
+        "koa-jwt": "^3.2.2",
         "koa-router": "^7.2.1",
-        "koa-static": "^4.0.1"
+        "koa-static": "^4.0.1",
+        "moment": "^2.18.1"
     },
     "devDependencies": {
         "babel": "^6.23.0",
