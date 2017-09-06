@@ -6,17 +6,14 @@ import Router from 'koa-router';
 import debugg from 'debug';
 
 /***** import own libraries *****/
-import configs from '../configs/index'
+import Index from '../controllers/index'
 
 const router = new Router();
-const debug = debug('KNME');
+const debug = debugg('KNME');
 
 debug('router start');
 
 router
-    .get('/', (ctx, next) => {
-        ctx.status = 200;
-        ctx.body = { data: 'success' }
-    })
+    .get('/', Index.index)
 
 export default router

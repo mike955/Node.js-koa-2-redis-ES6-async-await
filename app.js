@@ -16,7 +16,7 @@ import configs from './app/configs/index'
 import router from './app/routes'
 
 const app = new Koa();
-const debug = debug('KNME')
+const debug = debugg('KNME')
 
 if (process.env.NODE_ENV === 'production') {
     debug('Enviroment is product')
@@ -49,6 +49,10 @@ app
     .use(bodyParser())
     .use(router.routes())
     .use(router.allowedMethods())
+
+app.on('error', (err) => {
+    console.error(err);
+})
 
 debug('start listen');
 app.listen(configs.portConfig, (err) => {
