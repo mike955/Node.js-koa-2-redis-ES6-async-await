@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - 2017:2017
+    volumes:
+      - .:/src
+    links:
+      - mysql:mysql
+  mysql:
+    image: mysql
+    ports:
+      - 3307:3306
+    volumes:
+      - ./mysql_data:/src/data_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 3564423
+      MYSQL_DATABASE: manage_platform

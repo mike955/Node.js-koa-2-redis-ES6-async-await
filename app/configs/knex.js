@@ -3,7 +3,7 @@
 module.exports = {
     client: 'mysql', //数据库类型
     connection: {
-        host: 'localhost', //数据库地址
+        host: 'mysql', //数据库地址
         user: 'root', //数据库用户名
         password: '3564423', //数据库密码
         database: 'manage_platform', //数据库名字
